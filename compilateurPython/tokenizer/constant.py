@@ -7,4 +7,7 @@ specialChars = {
     "quotationMark":  {"regRule": "/\"/g", "value":'"'},
     "openParenthese":  {"regRule": "/\(/g", "value":'"'},
     "closeParenthese":  {"regRule": "/\)/g", "value":'"'}
-};
+}
+
+
+
