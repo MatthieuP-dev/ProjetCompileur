@@ -9,5 +9,6 @@ specialChars = {
     "closeParenthese":  {"regRule": "/\)/g", "value":'"'}
 }
 
-
+typeNumber  = "int"
+typeWord    = "String"
 
