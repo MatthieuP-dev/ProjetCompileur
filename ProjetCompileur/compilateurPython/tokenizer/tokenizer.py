@@ -15,7 +15,6 @@ class Token :
         tokens = []
         for i in range(0, len(_tokens)):
             t = _tokens[i]
-            
            
             #si le token est une classe
             if constant.typeClass in t:
