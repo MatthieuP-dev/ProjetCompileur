@@ -8,7 +8,7 @@ class Helper :
         for i in self.liste :
             if self.detectTabulation(i):
                 print(i)'''
-    #permet de mettre sous forme de liste chaque ligne du fichier (je sais pas si ca va servir)
+    #permet de mettre sous forme de liste chaque ligne du fichier (je sais pas si ca va servir) 
     '''def parserLine(self,code):
         res = ""
         for i in code:
@@ -26,7 +26,7 @@ class Helper :
         for i in line :
             if i != " ":
                 return False
-            res+=1
+            res+=1 
         if res % 4 == 0 :
             return True'''
 
@@ -47,4 +47,3 @@ class Helper :
             line.replace("\t","TEST")
             print(line)
             print("----------")"""
-            

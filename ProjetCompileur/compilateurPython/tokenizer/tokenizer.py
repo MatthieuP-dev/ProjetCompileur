@@ -23,7 +23,7 @@ class Token :
             else:
                 #si le token est un main
                 if constant.typeMain in t:
-                    tokens.append({"type": constant.typeMain, "value": t})# faire ca dans parser.py
+                    tokens.append({"type": constant.typeMain, "value": t})# faire ca dans parser.py 
                 else:
                     #  si le token n'est pas un nombre
                     #print(t)
@@ -33,7 +33,7 @@ class Token :
                     if constant.typeNumber in t:
                         tokens.append({"type": constant.typeNumber, "value": t})
                         ##sinon print
-                    if constant.typePrint in t:
+                    if constant.typePrint in t: 
                         tokens.append({"type": constant.typePrint, "value": t})
                     if constant.typeIf in t:
                         tokens.append({"type": constant.typeIf, "value": t})
