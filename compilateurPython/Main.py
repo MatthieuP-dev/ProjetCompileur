@@ -1,8 +1,8 @@
 from tokenizer import tokenizer
-file = open("test.py","r")
-#print(file.read())
-#for i in file.read():
-#    print(i)
+from tokenizer import helper
+import re
+#file = open("Test.java","r")
 
-token = tokenizer.Token()
-token.tokenizer(file.read())
+with open('Test.java') as file:
+    token = tokenizer.Token()
+    print(token.tokenizer(file.read()))
