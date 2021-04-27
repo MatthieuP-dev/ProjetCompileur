@@ -9,7 +9,7 @@ class Token :
         h = helper.Helper()
 
         _tokens = h.replaceSpecialsChars(c)
-        _tokens = re.split('{|}|        ',_tokens)
+        _tokens = re.split('{|}|\t|\n|\v',_tokens)
         
         #print(_tokens)
         tokens = []
@@ -18,12 +18,12 @@ class Token :
            
             #si le token est une classe
             if constant.typeClass in t:
-                tokens.append({"type": constant.typeClass})# faire ca dans parser.py
+                tokens.append({"type": constant.typeClass, "value": t})# faire ca dans parser.py
 
             else:
                 #si le token est un main
                 if constant.typeMain in t:
-                    tokens.append({"type": constant.typeMain})# faire ca dans parser.py
+                    tokens.append({"type": constant.typeMain, "value": t})# faire ca dans parser.py
                 else:
                     #  si le token n'est pas un nombre
                     #print(t)
@@ -32,6 +32,14 @@ class Token :
                         #sinon c'est un nombre
                     if constant.typeNumber in t:
                         tokens.append({"type": constant.typeNumber, "value": t})
+                        ##sinon print
+                    if constant.typePrint in t:
+                        tokens.append({"type": constant.typePrint, "value": t})
+                    if constant.typeIf in t:
+                        tokens.append({"type": constant.typeIf, "value": t})
+                    if constant.typeFor in t:
+                        tokens.append({"type": constant.typeFor, "value": t})
+
         if len(tokens) < 1:
             raise Exception(constant.errorNoTokenFound)
         return tokens
