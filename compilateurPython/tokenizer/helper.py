@@ -38,7 +38,7 @@ class Helper :
 
     def replaceSpecialsChars(self,code):
         for charName in constant.specialChars:
-            element = constant.specialChars[charName];
+            element = constant.specialChars[charName]
             code = code.replace(element['value'], ' *'+charName+'* ')
         return code
 
