@@ -7,4 +7,11 @@ specialChars = {
     "quotationMark":  {"regRule": "/\"/g", "value":'"'},
     "openParenthese":  {"regRule": "/\(/g", "value":'"'},
     "closeParenthese":  {"regRule": "/\)/g", "value":'"'}
-};
+}
+
+typeClass = "class"
+typeMain = "public static void main"
+typeNumber  = "int"
+typeWord    = "String"
+
+errorNoTokenFound = 'No Tokens Found.'
