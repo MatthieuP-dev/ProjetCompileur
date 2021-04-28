@@ -1,4 +1,5 @@
-from . import constant
+from . import constantToken
+
 class Helper :
 
     def __init__(self):
@@ -31,14 +32,14 @@ class Helper :
             return True'''
 
     def checkChars(self,t):
-        for charName in constant.specialChars :
+        for charName in constantToken.specialChars :
             if(t=='*'+charName+'*'):
                 return charName
         return False
 
     def replaceSpecialsChars(self,code):
-        for charName in constant.specialChars:
-            element = constant.specialChars[charName]
+        for charName in constantToken.specialChars:
+            element = constantToken.specialChars[charName]
             code = code.replace(element['value'], ' *'+charName+'* ')
         return code
 
